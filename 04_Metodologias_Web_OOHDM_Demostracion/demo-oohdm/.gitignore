@@ -1,0 +1,5 @@
+datos/soporte.db
+datos/soporte.db-shm
+datos/soporte.db-wal
+node_modules/
+.DS_Store
