@@ -1,0 +1,13 @@
+{
+  "name": "lab06-contactos-parte-b",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Laboratorio 06, parte B: API de contactos con los estilos de Soporte Web",
+  "scripts": {
+    "start": "node server_rutas.js"
+  },
+  "engines": {
+    "node": ">=24.11.0"
+  }
+}

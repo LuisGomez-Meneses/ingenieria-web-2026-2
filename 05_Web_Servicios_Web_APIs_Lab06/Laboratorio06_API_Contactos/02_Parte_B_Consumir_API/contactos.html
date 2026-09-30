@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte Web | Consultar contactos</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <a class="marca" href="/">Soporte Web</a>
+    <nav aria-label="Navegación principal">
+      <a href="/">Inicio</a>
+      <a href="/acerca">Acerca de</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/contacto">Contacto</a>
+      <a href="/contactos">Consultar contactos</a>
+    </nav>
+  </header>
+  <main>
+    <section class="encabezado-pagina">
+      <p class="etiqueta">Consulta</p>
+      <h1>Contactos registrados</h1>
+      <p>Consulta los contactos guardados o registra uno nuevo.</p>
+      <div class="acciones">
+        <button id="btnConsultar" type="button">Consultar contactos</button>
+        <a class="boton secundario" href="/contacto">Registrar contacto</a>
+      </div>
+    </section>
+    <section class="panel">
+      <h2>Lista de contactos</h2>
+      <p id="estado" role="status" aria-live="polite"></p>
+      <div role="region" aria-label="Tabla de contactos" tabindex="0" style="overflow-x: auto;">
+        <table id="tablaContactos" aria-label="Contactos almacenados">
+          <thead>
+            <tr><th scope="col">ID</th><th scope="col">Nombre</th><th scope="col">Correo</th></tr>
+          </thead>
+          <tbody id="cuerpoTabla"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>Ingeniería Web · Demostración académica</footer>
+    <script>
+        const boton = document.getElementById('btnConsultar');
+        const estado = document.getElementById('estado');
+        const cuerpoTabla = document.getElementById('cuerpoTabla');
+
+        async function cargarContactos() {
+            estado.textContent = 'Consultando...';
+            cuerpoTabla.replaceChildren();
+            try {
+                const respuesta = await fetch('/api/contactos');
+                if (!respuesta.ok) {
+                    throw new Error(`Estado HTTP ${respuesta.status}`);
+                }
+                const contactos = await respuesta.json();
+                mostrarContactos(contactos);
+            } catch (error) {
+                console.error(error);
+                estado.textContent = 'No fue posible consultar los contactos.';
+            }
+        }
+        boton.addEventListener('click', cargarContactos);
+
+        function mostrarContactos(contactos) {
+            if (contactos.length === 0) {
+                estado.textContent = 'No hay contactos registrados.';
+                return;
+            }
+            for (const contacto of contactos) {
+                const fila = document.createElement('tr');
+                agregarCelda(fila, contacto.id);
+                agregarCelda(fila, contacto.nombre);
+                agregarCelda(fila, contacto.correo);
+                cuerpoTabla.appendChild(fila);
+            }
+            estado.textContent = '';
+        }
+
+        function agregarCelda(fila, valor) {
+            const celda = document.createElement('td');
+            celda.textContent = valor;
+            fila.appendChild(celda);
+        }
+    </script>
+</body>
+</html>
