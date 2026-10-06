@@ -1,0 +1,14 @@
+{
+  "name": "lab07-contactos-mvc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Continuación del Laboratorio 06: capas y MVC con módulos nativos",
+  "scripts": {
+    "start": "node server_rutas.js",
+    "ejemplos": "node scripts/cargar_ejemplos.js"
+  },
+  "engines": {
+    "node": ">=24.11.0"
+  }
+}
