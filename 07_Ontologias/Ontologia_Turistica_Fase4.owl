@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Pintorescos">
+    <rdfs:label xml:lang="es">Pintorescos</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Atracciones"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Museos">
+    <rdfs:label xml:lang="es">Museos</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Culturales"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Horario_Apertura">
+    <rdfs:label xml:lang="es">Horario_Apertura</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Tiempo"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Dias_Apertura">
+    <rdfs:label xml:lang="es">Dias_Apertura</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Tiempo"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Restaurantes">
+    <rdfs:label xml:lang="es">Restaurantes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Restauracion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Para_Grupos">
+    <rdfs:label xml:lang="es">Para_Grupos</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Entradas"/>
+  </owl:Class>
+  <owl:Ontology rdf:about="http://example.org/ontologia-turistica-fase4">
+    <rdfs:label xml:lang="es">Ontología turística: jerarquía de clases de la fase 4</rdfs:label>
+    <rdfs:comment xml:lang="es">Recreación en OWL de la jerarquía de la diapositiva 20 (página 20 del PDF) de Desarrollo de ontologías, de Javier Béjar, UPC. Corresponde al diagrama «Fase 4 - Ejemplo: Ontología turística». Material de referencia con atribución CC BY-NC-SA.</rdfs:comment>
+    <rdfs:comment xml:lang="es">Se conservan los nombres de las 26 clases y sus relaciones de subclase. Thing se representa mediante owl:Thing. Este archivo contiene solamente la jerarquía ilustrada; no agrega propiedades, individuos, equivalencias ni disyunciones. Es una reconstrucción didáctica del diagrama, no el archivo e-tourism.owl original.</rdfs:comment>
+    <dcterms:source rdf:resource="https://www.cs.upc.edu/~bejar/ecsdi/Teoria/ECSDI05b-Desarrollo.pdf"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Iglesias">
+    <rdfs:label xml:lang="es">Iglesias</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Atracciones"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Localizacion">
+    <rdfs:label xml:lang="es">Localizacion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Pubs">
+    <rdfs:label xml:lang="es">Pubs</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Restauracion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Metro">
+    <rdfs:label xml:lang="es">Metro</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Transporte"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Abonos">
+    <rdfs:label xml:lang="es">Abonos</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Entradas"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Individuales">
+    <rdfs:label xml:lang="es">Individuales</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Entradas"/>
+    <rdfs:comment xml:lang="es">Clase que representa entradas individuales. El nombre «Individuales» no indica que sus elementos gráficos sean individuos OWL.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Fechas_Apertura">
+    <rdfs:label xml:lang="es">Fechas_Apertura</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Tiempo"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Monumentos">
+    <rdfs:label xml:lang="es">Monumentos</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Atracciones"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Edificios_Singulares">
+    <rdfs:label xml:lang="es">Edificios_Singulares</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Culturales"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Autobus">
+    <rdfs:label xml:lang="es">Autobus</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Transporte"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Bares">
+    <rdfs:label xml:lang="es">Bares</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Restauracion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Con_Descuento">
+    <rdfs:label xml:lang="es">Con_Descuento</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Entradas"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Tranvia">
+    <rdfs:label xml:lang="es">Tranvia</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Transporte"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Lugares">
+    <rdfs:label xml:lang="es">Lugares</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Transporte">
+    <rdfs:label xml:lang="es">Transporte</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Tiempo">
+    <rdfs:label xml:lang="es">Tiempo</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Entradas">
+    <rdfs:label xml:lang="es">Entradas</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Culturales">
+    <rdfs:label xml:lang="es">Culturales</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Lugares"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Restauracion">
+    <rdfs:label xml:lang="es">Restauracion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Lugares"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/ontologia-turistica-fase4#Atracciones">
+    <rdfs:label xml:lang="es">Atracciones</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/ontologia-turistica-fase4#Lugares"/>
+  </owl:Class>
+</rdf:RDF>
