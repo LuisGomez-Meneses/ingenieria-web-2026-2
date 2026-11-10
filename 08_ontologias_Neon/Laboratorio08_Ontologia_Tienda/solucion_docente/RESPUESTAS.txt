@@ -1,0 +1,10 @@
+SOLUCIÓN DOCENTE
+PC1 antes: cuaderno001, lapiz001. Después: cuaderno001, lapiz001, mochila001.
+PC2: ana antes y después.
+PC3 antes: cuaderno001 y lapiz001. Después: también mochila001.
+Premisas: mochila001 rdf:type Mochila; Mochila rdfs:subClassOf Producto.
+Consecuencia: mochila001 rdf:type Producto.
+Esta consecuencia se justifica manualmente; no se ha ejecutado un razonador.
+También se puede derivar pertenencia a Producto por el rango de incluyeProducto; en la explicación central use la jerarquía para aislar la idea de subclase.
+Errores que revisar: confundir Mochila con mochila001; invertir la flecha de subclase; usar una propiedad de datos para conectar dos individuos; declarar Producto y Mochila disjuntas; añadir la clase sin actualizar los individuos o el diagrama.
+Cantidades y precios por línea: añadir DetallePedido para una representación fiel de esos requisitos.

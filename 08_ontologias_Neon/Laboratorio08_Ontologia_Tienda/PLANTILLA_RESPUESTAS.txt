@@ -1,0 +1,13 @@
+Integrantes:
+Fecha:
+PC1 antes / después:
+PC2 antes / después:
+PC3 antes / después:
+Clase agregada y justificación:
+Individuo agregado:
+Propiedad de objeto utilizada:
+Propiedades de datos utilizadas:
+Dos afirmaciones declaradas:
+Una consecuencia inferida y premisas que la justifican:
+¿Por qué incluyeProducto no representa cantidades por línea?
+¿Qué cambió entre el diagrama y el Turtle?

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 770">
+<defs><marker id="full" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0 0 L11 5 L0 10 Z" fill="#24586B"/></marker><marker id="open" markerWidth="14" markerHeight="12" refX="13" refY="6" orient="auto"><path d="M1 1 L13 6 L1 11 Z" fill="white" stroke="#24586B"/></marker></defs>
+<rect width="1150" height="770" fill="white"/><text x="40" y="32" font-family="Arial" font-size="23" fill="#173c4e">Ontología de la tienda · esquema de clases</text>
+<path d="M 200.0 230 L 525.0 160" fill="none" stroke="#24586B" stroke-width="2" marker-end="url(#open)"/>
+<text x="327.5" y="183.0" font-family="Arial" font-size="16" fill="#173c4e">subclase de</text>
+<path d="M 830.0 230 L 525.0 160" fill="none" stroke="#24586B" stroke-width="2" marker-end="url(#open)"/>
+<text x="642.5" y="183.0" font-family="Arial" font-size="16" fill="#173c4e">subclase de</text>
+<path d="M 195.0 570 L 525.0 530" fill="none" stroke="#24586B" stroke-width="2" marker-end="url(#full)"/>
+<text x="285" y="540" font-family="Arial" font-size="16" fill="#173c4e">realizaPedido</text>
+<path d="M 640 485.0 L 1020 485.0 L 1020 110.0 L 640 110.0" fill="none" stroke="#24586B" stroke-width="2" marker-end="url(#full)"/>
+<text x="850" y="408" font-family="Arial" font-size="16" fill="#173c4e">incluyeProducto</text>
+<path d="M 525.0 260 L 525.0 160" fill="none" stroke="#24586B" stroke-width="2" marker-end="url(#open)"/>
+<text x="550" y="218" font-family="Arial" font-size="16" fill="#173c4e">subclase de</text>
+<rect x="410" y="60" width="230" height="100" rx="8" fill="#e8f1f5" stroke="#24586B" stroke-width="2"/>
+<text x="525.0" y="87" text-anchor="middle" font-family="Arial" font-size="19" fill="#173c4e">Producto</text>
+<text x="525.0" y="112" text-anchor="middle" font-family="Arial" font-size="15" fill="#173c4e">nombreProducto : string</text>
+<text x="525.0" y="137" text-anchor="middle" font-family="Arial" font-size="15" fill="#173c4e">precioUnitario : decimal</text>
+<rect x="100" y="230" width="200" height="65" rx="8" fill="#e8f1f5" stroke="#24586B" stroke-width="2"/>
+<text x="200.0" y="257" text-anchor="middle" font-family="Arial" font-size="19" fill="#173c4e">Cuaderno</text>
+<rect x="730" y="230" width="200" height="65" rx="8" fill="#e8f1f5" stroke="#24586B" stroke-width="2"/>
+<text x="830.0" y="257" text-anchor="middle" font-family="Arial" font-size="19" fill="#173c4e">Lapiz</text>
+<rect x="410" y="440" width="230" height="90" rx="8" fill="#e8f1f5" stroke="#24586B" stroke-width="2"/>
+<text x="525.0" y="467" text-anchor="middle" font-family="Arial" font-size="19" fill="#173c4e">Pedido</text>
+<text x="525.0" y="492" text-anchor="middle" font-family="Arial" font-size="15" fill="#173c4e">fechaPedido : date</text>
+<rect x="80" y="570" width="230" height="90" rx="8" fill="#e8f1f5" stroke="#24586B" stroke-width="2"/>
+<text x="195.0" y="597" text-anchor="middle" font-family="Arial" font-size="19" fill="#173c4e">Cliente</text>
+<text x="195.0" y="622" text-anchor="middle" font-family="Arial" font-size="15" fill="#173c4e">nombreCliente : string</text>
+<rect x="410" y="260" width="230" height="65" rx="8" fill="#e8f1f5" stroke="#24586B" stroke-width="2"/>
+<text x="525.0" y="287" text-anchor="middle" font-family="Arial" font-size="19" fill="#173c4e">Mochila</text>
+<text x="50" y="720" font-family="Arial" font-size="16">Subclase: flecha hueca hacia la superclase. Relación: flecha llena hacia el rango.</text>
+<text x="50" y="748" font-family="Arial" font-size="16">Las propiedades de datos aparecen dentro de las clases; los individuos están en el archivo Turtle.</text></svg>
