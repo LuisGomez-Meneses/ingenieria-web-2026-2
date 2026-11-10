@@ -1,0 +1,125 @@
+@prefix : <https://example.org/tienda#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/tienda> a owl:Ontology ;
+    rdfs:label "Tienda con detección visual"@es ;
+    rdfs:comment "Los productos son referencias del catálogo. Una detección sugiere referencias; no identifica un SKU ni autoriza una compra."@es .
+
+:Banano a owl:Class ;
+    rdfs:subClassOf :Fruta ;
+    :etiquetaYOLO "banana" .
+
+:Botella a owl:Class ;
+    rdfs:subClassOf :Recipiente ;
+    :etiquetaYOLO "bottle" .
+
+:Libro a owl:Class ;
+    rdfs:subClassOf :Papeleria ;
+    :etiquetaYOLO "book" .
+
+:Manzana a owl:Class ;
+    rdfs:subClassOf :Fruta ;
+    :etiquetaYOLO "apple" .
+
+:Taza a owl:Class ;
+    rdfs:subClassOf :Recipiente ;
+    :etiquetaYOLO "cup" .
+
+:Tijera a owl:Class ;
+    rdfs:subClassOf :Papeleria ;
+    :etiquetaYOLO "scissors" .
+
+:cajaXYXY a owl:DatatypeProperty ;
+    rdfs:domain :Deteccion ;
+    rdfs:range xsd:string .
+
+:cantidad a owl:DatatypeProperty ;
+    rdfs:domain :DetallePedido ;
+    rdfs:range xsd:integer .
+
+:confianza a owl:DatatypeProperty ;
+    rdfs:domain :Deteccion ;
+    rdfs:range xsd:decimal .
+
+:contieneDeteccion a owl:ObjectProperty ;
+    rdfs:domain :Imagen ;
+    rdfs:range :Deteccion .
+
+:correspondeA a owl:ObjectProperty ;
+    rdfs:domain :DetallePedido ;
+    rdfs:range :Producto .
+
+:etiquetaDetectada a owl:DatatypeProperty ;
+    rdfs:domain :Deteccion ;
+    rdfs:range xsd:string .
+
+:etiquetaYOLO a owl:AnnotationProperty .
+
+:existencias a owl:DatatypeProperty ;
+    rdfs:domain :Producto ;
+    rdfs:range xsd:integer .
+
+:fechaPedido a owl:DatatypeProperty ;
+    rdfs:domain :Pedido ;
+    rdfs:range xsd:dateTime .
+
+:modelo a owl:DatatypeProperty ;
+    rdfs:domain :Deteccion ;
+    rdfs:range xsd:string .
+
+:nombreArchivo a owl:DatatypeProperty ;
+    rdfs:domain :Imagen ;
+    rdfs:range xsd:string .
+
+:nombreCliente a owl:DatatypeProperty ;
+    rdfs:domain :Cliente ;
+    rdfs:range xsd:string .
+
+:nombreProducto a owl:DatatypeProperty ;
+    rdfs:domain :Producto ;
+    rdfs:range xsd:string .
+
+:precioCatalogo a owl:DatatypeProperty ;
+    rdfs:domain :Producto ;
+    rdfs:range xsd:integer .
+
+:precioUnitarioCompra a owl:DatatypeProperty ;
+    rdfs:domain :DetallePedido ;
+    rdfs:range xsd:integer .
+
+:realizaPedido a owl:ObjectProperty ;
+    rdfs:domain :Cliente ;
+    rdfs:range :Pedido .
+
+:sugiereProducto a owl:ObjectProperty ;
+    rdfs:domain :Deteccion ;
+    rdfs:range :Producto .
+
+:tieneDetalle a owl:ObjectProperty ;
+    rdfs:domain :Pedido ;
+    rdfs:range :DetallePedido .
+
+:Cliente a owl:Class .
+
+:Fruta a owl:Class ;
+    rdfs:subClassOf :Producto .
+
+:Imagen a owl:Class .
+
+:Papeleria a owl:Class ;
+    rdfs:subClassOf :Producto .
+
+:Recipiente a owl:Class ;
+    rdfs:subClassOf :Producto .
+
+:Pedido a owl:Class .
+
+:DetallePedido a owl:Class .
+
+:Deteccion a owl:Class .
+
+:Producto a owl:Class ;
+    rdfs:label "Producto" .
+
