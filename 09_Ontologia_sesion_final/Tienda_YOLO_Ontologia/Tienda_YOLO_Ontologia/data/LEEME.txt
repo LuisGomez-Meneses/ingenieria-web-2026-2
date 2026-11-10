@@ -1,4 +1,0 @@
-Aquí se crean tienda.sqlite3 y uploads/ al ejecutar la aplicación.
-Los pedidos persisten aunque cierres el navegador o reinicies el servidor.
-Para conservar todo, detén el servidor y copia esta carpeta y ontology/tienda.ttl.
-El ZIP inicial no contiene pedidos ni fotografías de estudiantes.
